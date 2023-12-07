@@ -30,7 +30,6 @@ public class Ball_File extends AnimListener implements GLEventListener, MouseLis
     GL gl;
     String page = "Home", level, direction = "up-right";
     boolean sound = true, startGame;
-//    block[] blocksArray = new block[42];
     int maxWidth = 1200, maxHeight = 700, borderX = 550, borderY = 680, ballX = 550, ballY = 655,
             speed = 20, borderSize = 130, lives = 3, delayLives;
 
@@ -225,7 +224,7 @@ public class Ball_File extends AnimListener implements GLEventListener, MouseLis
         } else {
             ren.draw("Gameover", 25, 60);
         }
-//        ren.setColor(Color.WHITE);
+        ren.setColor(Color.WHITE);
         ren.endRendering();
         if (delayLives > 20) {
             lives--;
@@ -240,8 +239,6 @@ public class Ball_File extends AnimListener implements GLEventListener, MouseLis
                 page = "Home";
             }
         }
-
-        System.out.println("GameOver");
     }
 
     public void drawBlocks() {
